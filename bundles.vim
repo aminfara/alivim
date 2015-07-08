@@ -31,6 +31,11 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 "" Plugins
+" File tree
+NeoBundle 'scrooloose/nerdtree'
+
+" Show NERDTree in all tabs
+NeoBundle 'jistr/vim-nerdtree-tabs'
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.bundles"))

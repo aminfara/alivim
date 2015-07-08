@@ -8,3 +8,6 @@ source ~/.vim/bundles.vim
 
 " generals.vim is the file for general basic vim settings
 source ~/.vim/generals.vim
+
+" maplugins.vim for mappings and plugins settings
+source ~/.vim/maplugins.vim

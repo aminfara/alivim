@@ -4,7 +4,6 @@
 "
 " by Ali Aminfar (ali.aminfar@gmail.com) - July 2015
 
-
 let mapleader = ","
 let maplocalleader = "\\"
 
@@ -122,11 +121,14 @@ set ttyfast
 " Do not wrap words with EOL (insert)
 set textwidth=0
 set wrapmargin=0
-" wrap words with indent (view)
-set wrap
-set linebreak
-set breakindent
-
+if v:version >= 704 && has('patch346')
+  " wrap words with indent (view)
+  set wrap
+  set linebreak
+  set breakindent
+else
+  set nowrap
+endif
 "" Line number, cursor position (ruler)
 """"""""""""""""""""""""""""""""""""""""
 set number

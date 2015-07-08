@@ -3,7 +3,7 @@ Ali's vim distribution. This distribution is mostly for Ruby on Rails and Javasc
 
 # Requirements
 Here is the list of requirements for this distribution works efficiently.
-* vim > 7.4.346 (required for indented text wrapping)
+* vim
 * Ruby >= 1.9
 
 # Installation
@@ -28,7 +28,7 @@ General settings are consists of:
 * Compatible with 16 / 256 colors terminals
 For details you can check *generals.vim* file.
 
-## User Plugins
+## User plugins
 You can add your plugins to *~/.vimrc.bundles* file. Add plugins using NeoBundle as follows:
 ```vim
 " Format:
@@ -38,6 +38,11 @@ NeoBundle 'plugin'
 NeoBundle 'tomasr/molokai'
 ```
 
+## Bundled plugins
+### NERDTree (NERDTreeTabs)
+I use NERDTreeTabs because it all NERDTrees sychronized in different tabs. It is good if you work on just one project at a time. Mappings are:
+* ,nn : use (open or focus) NERDTree
+* ,nc : close NERDTree
 
 # Structure
 ## User defined files
@@ -47,6 +52,7 @@ NeoBundle 'tomasr/molokai'
 * ***vimrc***: This is the main config file which sources all other configuration files. It does not have any configurations itself.
 * ***bundles.vim***: This file sets NeoBundle and adds plugins to vim using NeoBundle. It also includes ~/.vimrc.bundles for to add user plugins as well.
 * ***generals.vim***: This file only contains general vim settings. It does not include any plugin or mapping settings. Settings here makes vim more civilized and modern even without any plugin.
+* ***maplugins.vim***: This file is used for plugin configurations and keyboard mappings.
 
 # References
 https://github.com/avelino/vim-bootstrap<br />
