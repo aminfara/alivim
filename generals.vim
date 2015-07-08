@@ -49,16 +49,16 @@ set tabstop=2
 
 "" Spell-checking
 """"""""""""""""""""""""""""""""""""""""
-call system('mkdir -vp ~/.vim/spell/ > /dev/null 2>&1')
+silent !mkdir -vp ~/.vim/spell/
 set spell
 set spelllang=en_us
 set spellfile=~/.vim/spell/en.utf-8.add
 
 "" swap, backup, undo
 """"""""""""""""""""""""""""""""""""""""
-call system('mkdir -vp ~/.vim/tmp/undo/ > /dev/null 2>&1')
-call system('mkdir -vp ~/.vim/tmp/swap/ > /dev/null 2>&1')
-call system('mkdir -vp ~/.vim/tmp/backup/ > /dev/null 2>&1')
+silent !mkdir -vp ~/.vim/tmp/undo/
+silent !mkdir -vp ~/.vim/tmp/swap/
+silent !mkdir -vp ~/.vim/tmp/backup/
 set undodir=~/.vim/tmp/undo,.
 set directory=~/.vim/tmp/swap,.
 set backupdir=~/.vim/tmp/backup,.
