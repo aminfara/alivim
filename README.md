@@ -71,6 +71,7 @@ Mappings are:
 
 ## Important Files
 * ***vimrc***: This is the main config file which sources all other configuration files. It does not have any configurations itself.
+* ***helpers.vim***: This file contains some helper functions that can be used for recurring tasks.
 * ***bundles.vim***: This file sets NeoBundle and adds plugins to vim using NeoBundle. It also includes ~/.vimrc.bundles for to add user plugins as well.
 * ***generals.vim***: This file only contains general vim settings. It does not include any plugin or mapping settings. Settings here makes vim more civilized and modern even without any plugin.
 * ***maplugins.vim***: This file is used for plugin configurations and keyboard mappings.

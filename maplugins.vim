@@ -5,7 +5,7 @@
 "" General Keyboard mappings
 """"""""""""""""""""""""""""""""""""""""
 " <F2> toggles spell checking for file
-nnoremap <F2> :<C-u>call ToggleOption('spell')<CR>
+nnoremap <F2> :<C-u>call ToggleOption('spell', 'local')<CR>
 
 " <F3> toggles paste mode
 " The first line is for normal mode and the second is for insert mode

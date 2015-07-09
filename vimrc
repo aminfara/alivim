@@ -3,6 +3,9 @@
 "
 " by Ali Aminfar (ali.aminfar@gmail.com) - July 2015
 
+" helpers.vim contains helper functions used in other files
+source ~/.vim/helpers.vim
+
 " bundles.vim setup NeoBundle and adds plugins
 source ~/.vim/bundles.vim
 
