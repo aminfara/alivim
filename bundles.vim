@@ -37,6 +37,9 @@ NeoBundle 'scrooloose/nerdtree'
 " Show NERDTree in all tabs
 NeoBundle 'jistr/vim-nerdtree-tabs'
 
+" git integration
+NeoBundle 'tpope/vim-fugitive'
+
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles

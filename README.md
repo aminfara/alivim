@@ -28,6 +28,15 @@ General settings are consists of:
 * Compatible with 16 / 256 colors terminals
 For details you can check *generals.vim* file.
 
+## General keyboard mappings
+Here are the keyboard mappings for vim features, they are defined at the top of *maplugins.vim* file. Specific plugin mappings are in each plugins section.
+* F2 toggles spell-checking
+* F3 toggles paste mode (if you are using OSX you may need to press fn+F2)
+* ctrl+h jumps to left window
+* ctrl+l jumps to right window
+* ctrl+j jumps to down window
+* ctrl+k jumps to up window
+
 ## User plugins
 You can add your plugins to *~/.vimrc.bundles* file. Add plugins using NeoBundle as follows:
 ```vim
@@ -41,8 +50,20 @@ NeoBundle 'tomasr/molokai'
 ## Bundled plugins
 ### NERDTree (NERDTreeTabs)
 I use NERDTreeTabs because it all NERDTrees sychronized in different tabs. It is good if you work on just one project at a time. Mappings are:
-* ,nn : use (open or focus) NERDTree
-* ,nc : close NERDTree
+* ,nn use (open or focus) NERDTree
+* ,nc close NERDTree
+
+### vim-fugitive
+Mappings are:
+* ,ga :Gwrite
+* ,gc :Gcommit
+* ,gsh :Gpush
+* ,gll :Gpull
+* ,gs :Gstatus
+* ,gb :Gblame
+* ,gd :Gvdiff
+* ,gr :Gremove
+
 
 # Structure
 ## User defined files
