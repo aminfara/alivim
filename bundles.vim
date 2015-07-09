@@ -43,6 +43,12 @@ NeoBundle 'scrooloose/syntastic'
 " fuzzy file open
 NeoBundle 'kien/ctrlp.vim'
 
+" manipulation of surrounding parens, quotes, etc.
+NeoBundle 'tpope/vim-surround'
+
+" better looking statusline
+NeoBundle 'bling/vim-airline'
+
 """"""""
 " For Syntastic
 NeoBundle 'ynkdir/vim-vimlparser'

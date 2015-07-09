@@ -77,13 +77,17 @@ endif
 
 "" ctrlp
 """"""""""""""""""""""""""""""""""""""""
+let g:ctrlp_map = '<C-p>'
+let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_cache_dir = '~/.vim/tmp/ctrlp'
 let g:ctrlp_switch_buffer = 'ETVH'
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_open_new_file = 'v'
 let g:ctrlp_open_multiple_files = 'vjr'
 
-nnoremap <leader>p. :<C-u>CtrlPClearCache<cr>:CtrlP<cr>
+nnoremap <C-p> :<C-u>CtrlP<cr>
+nnoremap <leader>pp :<C-u>CtrlP<cr>
+nnoremap <leader>p. :<C-u>CtrlPClearCache<cr>:<C-u>CtrlP<cr>
 nnoremap <leader>pl :<C-u>CtrlPLine<cr>
 nnoremap <leader>pm :<C-u>CtrlPMRUFiles<cr>
 nnoremap <leader>pb :<C-u>CtrlPBuff<cr>
@@ -92,5 +96,43 @@ nnoremap <leader>pT :<C-u>CtrlPBufTagAll<cr>
 
 " ctrlp leaves stale caches behind if there is another vim process running
 " which didn't use ctrlp. so we clear all caches on each new vim invocation
-call ctrlp#clra()
+if exists(':CtrlP')
+  call ctrlp#clra()
+endif
+
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line']
+
+"" vim-airline
+""""""""""""""""""""""""""""""""""""""""
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'powerlineish'
+let g:airline#extensions#tabline#enabled = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+if g:airline_powerline_fonts == 0
+  let g:airline#extensions#tabline#left_sep = ' '
+  let g:airline#extensions#tabline#left_alt_sep = '|'
+  let g:airline_left_sep          = '▶'
+  let g:airline_left_alt_sep      = '»'
+  let g:airline_right_sep         = '◀'
+  let g:airline_right_alt_sep     = '«'
+  let g:airline_symbols.readonly  = '⊘'
+  let g:airline_symbols.linenr    = '␊'
+  let g:airline_symbols.branch    = '⎇' "➔, ➥, ⤴
+  let g:airline_symbols.paste     = 'ρ' "Þ, ∥
+  let g:airline_symbols.whitespace = 'Ξ'
+else
+  let g:airline#extensions#tabline#left_sep = ''
+  let g:airline#extensions#tabline#left_alt_sep = ''
+  " powerline symbols
+  let g:airline_left_sep = ''
+  let g:airline_left_alt_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_alt_sep = ''
+  let g:airline_symbols.branch = ''
+  let g:airline_symbols.readonly = ''
+  let g:airline_symbols.linenr = ''
+endif

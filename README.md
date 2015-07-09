@@ -5,6 +5,10 @@ Ali's vim distribution. This distribution is mostly for Ruby on Rails and Javasc
 Here is the list of requirements for this distribution works efficiently.
 * vim
 * Ruby >= 1.9
+* Syntastic requirements:
+ * rubocop
+ * jshint
+
 
 # Installation
 Please copy and paste the following lines in terminal.
@@ -70,19 +74,28 @@ Configured for the following languages:
 * Javascript
 * viml
 
-### ctrlp
+### CtrlP
 Mappings are:
-* CTRL-P for bringing ctrlp
-* ,p. clears ctrlp cache a then opens ctrlp
+* CTRL-P or ,pp for bringing CtrlP
+* ,p. clears CtrlP cache a then opens CtrlP
 * ,pl CtrlPLine
 * ,pm CtrlPMRUFiles
 * ,pb CtrlPBuff
 * ,pt CtrlPBufTag
 * ,pT CtrlPBufTagAll
 
+### vim-surround
+Just works. check github page for help. https://github.com/tpope/vim-surround
+
+### vim-airline
+A beautiful status line. If you do not have *powerline* fonts install in your terminal, please put the following in your *~/.vimrc.local*.
+```vim
+let g:airline_powerline_fonts = 0
+```
 # Structure
 ## User defined files
 * ***~/.vimrc.bundles***: You will add your plugins to installation using this file. Just add your plugin as described in *README.md* **'User Plugins'**
+* ***~/.vimrc.local***: Your personal config overrides. This file will be loaded after all other config files before plugin runs. You can add your own customizations here.
 
 ## Important Files
 * ***vimrc***: This is the main config file which sources all other configuration files. It does not have any configurations itself.

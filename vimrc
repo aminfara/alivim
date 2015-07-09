@@ -14,3 +14,8 @@ source ~/.vim/generals.vim
 
 " maplugins.vim for mappings and plugins settings
 source ~/.vim/maplugins.vim
+
+" ~/.vimrc.local user defined configurations
+if filereadable(glob("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
