@@ -40,6 +40,8 @@ NeoBundle 'tpope/vim-fugitive'
 " syntax checking on save
 NeoBundle 'scrooloose/syntastic'
 
+" fuzzy file open
+NeoBundle 'kien/ctrlp.vim'
 
 """"""""
 " For Syntastic

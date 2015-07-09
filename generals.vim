@@ -202,4 +202,5 @@ set visualbell
 
 " Enhanced command completion, shows possible matches
 set wildmenu
+set wildmode=longest,full
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif

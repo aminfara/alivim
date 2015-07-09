@@ -53,8 +53,10 @@ let g:syntastic_warning_symbol = '⚠⚠'
 let g:syntastic_style_error_symbol = '✗'
 let g:syntastic_style_warning_symbol = '⚠'
 let g:syntastic_loc_list_height = 5
-
-" Close the location-list when errors are gone
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_auto_loc_list = 1
 
 " Ruby syntax checking and lint
@@ -72,3 +74,23 @@ endif
 if executable('jshint')
     let g:syntastic_javascript_checkers = ['jshint']
 endif
+
+"" ctrlp
+""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_cache_dir = '~/.vim/tmp/ctrlp'
+let g:ctrlp_switch_buffer = 'ETVH'
+let g:ctrlp_clear_cache_on_exit = 1
+let g:ctrlp_open_new_file = 'v'
+let g:ctrlp_open_multiple_files = 'vjr'
+
+nnoremap <leader>p. :<C-u>CtrlPClearCache<cr>:CtrlP<cr>
+nnoremap <leader>pl :<C-u>CtrlPLine<cr>
+nnoremap <leader>pm :<C-u>CtrlPMRUFiles<cr>
+nnoremap <leader>pb :<C-u>CtrlPBuff<cr>
+nnoremap <leader>pt :<C-u>CtrlPBufTag<cr>
+nnoremap <leader>pT :<C-u>CtrlPBufTagAll<cr>
+
+" ctrlp leaves stale caches behind if there is another vim process running
+" which didn't use ctrlp. so we clear all caches on each new vim invocation
+call ctrlp#clra()
+let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line']

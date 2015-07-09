@@ -64,6 +64,21 @@ Mappings are:
 * ,gd :Gvdiff
 * ,gr :Gremove
 
+### Syntastic
+Configured for the following languages:
+* Ruby
+* Javascript
+* viml
+
+### ctrlp
+Mappings are:
+* CTRL-P for bringing ctrlp
+* ,p. clears ctrlp cache a then opens ctrlp
+* ,pl CtrlPLine
+* ,pm CtrlPMRUFiles
+* ,pb CtrlPBuff
+* ,pt CtrlPBufTag
+* ,pT CtrlPBufTagAll
 
 # Structure
 ## User defined files
