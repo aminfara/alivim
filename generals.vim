@@ -4,8 +4,8 @@
 "
 " by Ali Aminfar (ali.aminfar@gmail.com) - July 2015
 
-let mapleader = ","
-let maplocalleader = "\\"
+let g:mapleader = ","
+let g:maplocalleader = "\\"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Behavioral
@@ -146,7 +146,7 @@ if &term == "xterm" || &term == 'screen'
 endif
 
 if $COLORTERM == 'gnome-terminal'
-  term='xterm-256color'
+  set term='xterm-256color'
 endif
 
 " Setting color to 256 for more sophisticated terminals

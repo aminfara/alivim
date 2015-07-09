@@ -3,9 +3,6 @@
 "
 " by Ali Aminfar (ali.aminfar@gmail.com) - July 2015
 
-" Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
-
 if has('vim_starting')
   if &compatible
     set nocompatible               " Be iMproved
@@ -39,6 +36,17 @@ NeoBundle 'jistr/vim-nerdtree-tabs'
 
 " git integration
 NeoBundle 'tpope/vim-fugitive'
+
+" syntax checking on save
+NeoBundle 'scrooloose/syntastic'
+
+
+""""""""
+" For Syntastic
+NeoBundle 'ynkdir/vim-vimlparser'
+
+NeoBundle 'syngan/vim-vimlint', {
+    \ 'depends' : 'ynkdir/vim-vimlparser'}
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.bundles"))

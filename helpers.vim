@@ -12,6 +12,8 @@ function! ToggleOption(option_name, ...)
   if a:0 > 0
     if a:1 == 'local'
       let command='setlocal'
+    elseif a:1 == 'global'
+      let command='setglobal'
     endif
   endif
   execute command a:option_name.'!'
