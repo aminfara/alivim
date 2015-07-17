@@ -49,6 +49,9 @@ NeoBundle 'tpope/vim-surround'
 " better looking statusline
 NeoBundle 'bling/vim-airline'
 
+" Solarized color theme
+NeoBundle 'altercation/vim-colors-solarized'
+
 """"""""
 " For Syntastic
 NeoBundle 'ynkdir/vim-vimlparser'
