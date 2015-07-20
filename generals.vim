@@ -48,10 +48,10 @@ set tabstop=2
 
 "" Spell-checking
 """"""""""""""""""""""""""""""""""""""""
-silent !mkdir -vp ~/.vim/spell/
+silent !mkdir -vp ~/.vim/tmp/spell/
 set spell
 set spelllang=en_us
-set spellfile=~/.vim/spell/en.utf-8.add
+set spellfile=~/.vim/tmp/spell/en.utf-8.add
 
 "" swap, backup, undo
 """"""""""""""""""""""""""""""""""""""""

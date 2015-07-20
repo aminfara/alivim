@@ -65,17 +65,18 @@ let g:syntastic_auto_loc_list = 1
 " Ruby syntax checking and lint
 let g:syntastic_ruby_checkers = ['mri']
 if executable('rubocop')
-    let g:syntastic_ruby_checkers = g:syntastic_ruby_checkers + ['rubocop']
-    let g:syntastic_ruby_rubocop_args     = '--display-cop-names'
+  let g:syntastic_ruby_rubocop_exec = '~/.vim/scripts/rubocop.sh'
+  let g:syntastic_ruby_checkers = g:syntastic_ruby_checkers + ['rubocop']
+  let g:syntastic_ruby_rubocop_args = '--display-cop-names'
 endif
 
 if executable('ruby-lint')
-    let g:syntastic_ruby_checkers = g:syntastic_ruby_checkers + ['rubylint']
+  let g:syntastic_ruby_checkers = g:syntastic_ruby_checkers + ['rubylint']
 endif
 
 " Javascript check
 if executable('jshint')
-    let g:syntastic_javascript_checkers = ['jshint']
+  let g:syntastic_javascript_checkers = ['jshint']
 endif
 
 "" ctrlp

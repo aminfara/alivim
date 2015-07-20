@@ -70,9 +70,9 @@ Mappings are:
 
 ### Syntastic
 Configured for the following languages:
-* Ruby
-* Javascript
-* viml
+* Ruby (using **mri** and **rubocop**)
+* Javascript (using **jshint**)
+* viml (using **vim-lint**)
 
 ### CtrlP
 Mappings are:
@@ -109,6 +109,16 @@ colorscheme default
 * ***bundles.vim***: This file sets NeoBundle and adds plugins to vim using NeoBundle. It also includes ~/.vimrc.bundles for to add user plugins as well.
 * ***generals.vim***: This file only contains general vim settings. It does not include any plugin or mapping settings. Settings here makes vim more civilized and modern even without any plugin.
 * ***maplugins.vim***: This file is used for plugin configurations and keyboard mappings.
+
+## Directories
+* **scripts**: Contains different helper scripts and wrappers
+* **tmp**: Contains directories which is used for temporary files and caches or plugin data this directory will not be synced to git repo
+  * **swap**: for swap files (disabled by default)
+  * **backup**: for backup files (disabled by default)
+  * **spell**: when you add a word to dictionary it will be written in this directory
+  * **undo**: directory to save persistent undo. You can delete its contents time to time if you ran out of disk space.
+* **bundle**: directory contains plugins installed by NeoBundle
+
 # TODO
 Adding the following plugins:
 * vimproc
