@@ -92,6 +92,12 @@ A beautiful status line. If you do not have *powerline* fonts install in your te
 ```vim
 let g:airline_powerline_fonts = 0
 ```
+### Solarized color scheme
+You need to add color scheme to you terminal emulator as well so it works fine. You can install terminal colors from http://ethanschoonover.com/solarized/files/solarized.zip . If you had any problems installing solarized you can easily overwrite color scheme in your *~/.vimrc.local* as below:
+```vim
+colorscheme default
+```
+
 # Structure
 ## User defined files
 * ***~/.vimrc.bundles***: You will add your plugins to installation using this file. Just add your plugin as described in *README.md* **'User Plugins'**
@@ -103,6 +109,9 @@ let g:airline_powerline_fonts = 0
 * ***bundles.vim***: This file sets NeoBundle and adds plugins to vim using NeoBundle. It also includes ~/.vimrc.bundles for to add user plugins as well.
 * ***generals.vim***: This file only contains general vim settings. It does not include any plugin or mapping settings. Settings here makes vim more civilized and modern even without any plugin.
 * ***maplugins.vim***: This file is used for plugin configurations and keyboard mappings.
+# TODO
+Adding the following plugins:
+* vimproc
 
 # References
 https://github.com/avelino/vim-bootstrap<br />

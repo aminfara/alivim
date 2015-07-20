@@ -197,6 +197,10 @@ set showcmd
 " Highlight matching brace
 set showmatch
 
+" removing show mode as it is already shown by airline and conflicts with
+" echodoc
+set noshowmode
+
 " use visual bell instead of beeping
 set visualbell
 
