@@ -52,6 +52,12 @@ NeoBundle 'bling/vim-airline'
 " Solarized color theme
 NeoBundle 'altercation/vim-colors-solarized'
 
+" Fast and better way for commenting
+NeoBundle 'scrooloose/nerdcommenter'
+
+" Fast and easy movement
+NeoBundle 'easymotion/vim-easymotion'
+
 """"""""
 " For Syntastic
 NeoBundle 'ynkdir/vim-vimlparser'

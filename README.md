@@ -92,11 +92,28 @@ A beautiful status line. If you do not have *powerline* fonts install in your te
 ```vim
 let g:airline_powerline_fonts = 0
 ```
+
 ### Solarized color scheme
 You need to add color scheme to you terminal emulator as well so it works fine. You can install terminal colors from http://ethanschoonover.com/solarized/files/solarized.zip . If you had any problems installing solarized you can easily overwrite color scheme in your *~/.vimrc.local* as below:
 ```vim
 colorscheme default
 ```
+
+### The NERD Commenter
+Better way of commenting. Its fast and easy and understand different languages. For list of full shortcuts visit https://github.com/scrooloose/nerdcommenter . Some frequent shortcuts are:
+* ,cc Comment out the current line or text selected in visual mode
+* ,cu Uncomments the selected line(s)
+* ,ci Invert commenting
+* ,c$ Comments the current line from the cursor to the end of line
+* ,cA Adds comment delimiters to the end of line and goes into insert mode between them
+
+### EasyMotion
+This plugin ease the movement in vim even further by give you shortcut to virtually anywhere in the screen. I configured the following shortcuts (both normal and visual mode):
+*  s asks to characters and jump to the target
+* ,l smart right movement
+* ,k smart up movement
+* ,j smart down movement
+* ,h smart left movement
 
 # Structure
 ## User defined files
