@@ -143,8 +143,10 @@ endif
 
 "" Color scheme
 """"""""""""""""""""""""""""""""""""""""
-colorscheme solarized
-set background=dark
+if &term =~ '256color'
+  silent! colorscheme solarized
+  set background=dark
+endif
 
 "" EasyMotion
 """"""""""""""""""""""""""""""""""""""""
