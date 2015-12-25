@@ -3,7 +3,7 @@ Ali's vim distribution. This distribution is mostly for Ruby on Rails and Javasc
 
 # Requirements
 Here is the list of requirements for this distribution works efficiently.
-* vim
+* vim (obviously)
 * Ruby >= 1.9
 * Syntastic requirements:
  * rubocop
@@ -19,6 +19,8 @@ ln -sfn ~/.alivim ~/.vim
 ln -sfn ~/.alivim/vimrc ~/.vimrc
 vim
 ```
+
+You can reconfigure this distribution to your own taste using *~/.vimrc.local*, *~/.vimrc.bundles*, *~/.vimrc.after*. Please refer to [User overrides](#user_overrides).
 
 # Features & Usage
 ## General vim features
@@ -41,7 +43,7 @@ Here are the keyboard mappings for vim features, they are defined at the top of 
 * ctrl+j jumps to down window
 * ctrl+k jumps to up window
 
-## User plugins
+## <a name="user_plugins"></a>User plugins
 You can add your plugins to *~/.vimrc.bundles* file. Add plugins using NeoBundle as follows:
 ```vim
 " Format:
@@ -53,7 +55,7 @@ NeoBundle 'tomasr/molokai'
 
 ## Bundled plugins
 ### NERDTree (NERDTreeTabs)
-I use NERDTreeTabs because it all NERDTrees sychronized in different tabs. It is good if you work on just one project at a time. Mappings are:
+I use NERDTreeTabs because it all NERDTrees synchronized in different tabs. It is good if you work on just one project at a time. Mappings are:
 * ,nn use (open or focus) NERDTree
 * ,nc close NERDTree
 
@@ -116,9 +118,10 @@ This plugin ease the movement in vim even further by give you shortcut to virtua
 * ,h smart left movement
 
 # Structure
-## User defined files
-* ***~/.vimrc.bundles***: You will add your plugins to installation using this file. Just add your plugin as described in *README.md* **'User Plugins'**
+## <a name="user_overrides"></a>User overrides
+* ***~/.vimrc.bundles***: You will add your plugins to installation using this file. Just add your plugin as described in [User Plugins](#user_plugins).
 * ***~/.vimrc.local***: Your personal config overrides. This file will be loaded after all other config files before plugin runs. You can add your own customizations here.
+* ***~/.vimrc.after***: Your personal config overrides. This file will be loaded after plugin runs and overrides all configurations. You can add your own customizations here. Please be aware that no other plugins will be run after this, so configuration here normally do not affect plugins' behavior. Please use this file as last resort and only it you want to override a plugin's behavior.
 
 ## Important Files
 * ***vimrc***: This is the main config file which sources all other configuration files. It does not have any configurations itself.
@@ -135,6 +138,7 @@ This plugin ease the movement in vim even further by give you shortcut to virtua
   * **spell**: when you add a word to dictionary it will be written in this directory
   * **undo**: directory to save persistent undo. You can delete its contents time to time if you ran out of disk space.
 * **bundle**: directory contains plugins installed by NeoBundle
+* **after**: directory contains after plugin which is responsible for overriding plugins configurations (behavior). It also includes *~/.vimrc.after* for user after plugin overrides
 
 # TODO
 Adding the following plugins:
