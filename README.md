@@ -26,6 +26,7 @@ You can reconfigure this distribution to your own taste using *~/.vimrc.local*, 
 ## General vim features
 General settings are consists of:
 * utf-8 encoding
+* Uses system (OS) clipboard for yank, delete, put
 * Automatic indentation (2 spaces per tab, you can overwrite that in customization files)
 * Spell-checking (en_us)
 * Persistent undo
@@ -90,10 +91,7 @@ Mappings are:
 Just works. check github page for help. https://github.com/tpope/vim-surround
 
 ### vim-airline
-A beautiful status line. If you do not have *powerline* fonts install in your terminal, please put the following in your *~/.vimrc.local*.
-```vim
-let g:airline_powerline_fonts = 0
-```
+A beautiful status line. https://github.com/bling/vim-airline
 
 ### Solarized color scheme
 You need to add color scheme to you terminal emulator as well so it works fine. You can install terminal colors from http://ethanschoonover.com/solarized/files/solarized.zip . If you had any problems installing solarized you can easily overwrite color scheme in your *~/.vimrc.local* as below:

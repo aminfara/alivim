@@ -90,6 +90,9 @@ set autowriteall
 "" Miscellaneous behavioral
 """"""""""""""""""""""""""""""""""""""""
 
+" Copy to system clipboard
+set clipboard^=unnamed,unnamedplus
+
 " Fix backspace indent
 set backspace=indent,eol,start
 
