@@ -79,6 +79,15 @@ if executable('jshint')
   let g:syntastic_javascript_checkers = ['jshint']
 endif
 
+" CoffeeScript check
+if executable('coffee')
+  let g:syntastic_coffee_checkers = ['coffee']
+endif
+
+if executable('coffeelint')
+  let g:syntastic_coffee_checkers = ['coffeelint']
+endif
+
 "" ctrlp
 """"""""""""""""""""""""""""""""""""""""
 let g:ctrlp_map = '<C-p>'

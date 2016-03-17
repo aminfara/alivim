@@ -5,9 +5,11 @@ Ali's vim distribution. This distribution is mostly for Ruby on Rails and Javasc
 Here is the list of requirements for this distribution works efficiently.
 * vim (obviously)
 * Ruby >= 1.9
+* CoffeeScript
 * Syntastic requirements:
  * rubocop
  * jshint
+ * coffeelint
 
 
 # Installation
@@ -75,6 +77,7 @@ Mappings are:
 Configured for the following languages:
 * Ruby (using **mri** and **rubocop**)
 * Javascript (using **jshint**)
+* CoffeeScript (using **coffee** and **coffeelint**)
 * viml (using **vim-lint**)
 
 ### CtrlP

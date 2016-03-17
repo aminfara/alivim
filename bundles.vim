@@ -37,6 +37,9 @@ NeoBundle 'jistr/vim-nerdtree-tabs'
 " git integration
 NeoBundle 'tpope/vim-fugitive'
 
+" Support for CoffeeScript filetype
+NeoBundle 'vim-coffee-script'
+
 " syntax checking on save
 NeoBundle 'scrooloose/syntastic'
 
@@ -47,7 +50,8 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-surround'
 
 " better looking statusline
-NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 
 " Solarized color theme
 NeoBundle 'altercation/vim-colors-solarized'
