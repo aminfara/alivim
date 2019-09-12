@@ -1,4 +1,5 @@
 let g:alivim_dir = fnamemodify(resolve(expand('<sfile>:p')), ':p:h')
+let g:alivim_plug_dir = g:alivim_dir . '/plugged'
 
 "===============================================================================
 " Plugins
@@ -25,6 +26,7 @@ endif
 "
 call plug#begin()
 Plug 'tpope/vim-sensible'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 "===============================================================================
@@ -92,5 +94,90 @@ augroup END
 " Visual
 "===============================================================================
 
+""
+" Terminal
+"
+
+" Setting color to 16
+set t_Co=16
+
+" Setting color to 256 for more sophisticated terminals
+if $TERM =~ '256color'
+  set t_Co=256
+endif
+
+" clearing using the current background color
+set t_ut=
+
+
+""
+" Folding
+"
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=syntax
+set foldenable
+
+""
+" Invisible characters
+"
+set listchars=tab:⇥\ ,trail:·
+set list  " Show invisible characters
+
+""
+" Scroll offsets
+"
+set scrolloff=5
+set sidescrolloff=10
+
+""
+" Splitting windows
+"
+set splitbelow
+set splitright
+
+""
+" Wrapping
+"
+set colorcolumn=120
+set textwidth=0
+set wrapmargin=0
+set wrap
+set linebreak
+set breakindent
+
+""
+" Line numbers
+"
+set number relativenumber
+augroup neospace_layers_better_visual_line_numbers
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+""
+" Miscellaneous
+"
+set cursorline                        " draws a line to show the current line
+set noshowmode                        " don't show mode, status bar plugin will show it
+set ruler                             " show cursor position
+set showcmd                           " show partial command
+set visualbell                        " beep visually
+
+"===============================================================================
+" Theme
+"===============================================================================
+
+if isdirectory(g:alivim_plug_dir . '/base16-vim')
+  colorscheme base16-default-dark
+  if &t_Co == 256
+    let g:base16colorspace=256
+  endif
+
+  if filereadable(expand($HOME . "/.vimrc_background"))
+    source ~/.vimrc_background
+  endif
+endif
 
 " vim:set filetype=vim expandtab shiftwidth=2:
